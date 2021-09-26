@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
@@ -203,15 +203,15 @@
           <div class="video-slider">
             <div class="video-slider-iframes">
               <div class="video-slider-inner">
-                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
-                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
-                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
-                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 
-                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <iframe class="video-iframes-item" src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
               </div>
             </div>
             <div class="video-slider-panel">
@@ -337,7 +337,126 @@
           </div>
         </div>
       </section>
-    
+      
+      <section class="section modal">
+        <form class="modal-form">
+          <div class="modal-booking">
+            <div class="modal-logo"><img src="./assets/svg/modal/logo.svg" alt="modal-logo"></div>
+            <h2 class="modal-title">Booking tickets</h2>
+            <div class="modal-subtitle">Tour to Louvre</div>
+            <div class="divider"></div>
+
+            <div class="modal-booking-inputs">
+              <div class="small-inputs-container">
+                <input class="small-input top-input" type="date" id="date">
+                <input class="small-input top-input" type="time" id="time">
+              </div>
+              <div class="input-block username-block">
+                <input class="modal-booking-text placeholder top-input" type="text" id="username" placeholder="Name">
+              </div>
+              <div class="input-block email-block">
+                <input class="modal-booking-email placeholder top-input" type="email" id="email" placeholder="E-mail">
+              </div>
+              <div class="input-block tel-block">
+                <input class="modal-booking-tel placeholder top-input" type="tel" id="phone" placeholder="Phone">
+              </div>
+              <div class="input-block ticket-type-block">
+                <select class="modal-booking-select placeholder top-input" name="ticket-type" id="ticket-type">
+                  <option value="0" disabled selected>Ticket Type</option>
+                  <option value="1">Permanent exhibition</option>
+                  <option value="2">Temporary exhibition</option>
+                  <option value="2">Combined exhibition</option>
+                </select>
+              </div>
+
+              <div class="modal-booking-tickets">
+                <div class="modal-booking-tickets-subheader">Entry ticket</div>
+                <div class="modal-booking-tickets-divider"></div>
+                <div class="modal-booking-buttons mb15">
+                  <div class="modal-booking-amount-descr">Basic 18+ (20 €)</div>
+                  <div class="modal-booking-block">
+                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                    <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
+                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  </div>
+                </div>
+                <div class="modal-booking-buttons">
+                  <div class="modal-booking-amount-descr">Senior 65+ (10 €)</div>
+                  <div class="modal-booking-block">
+                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                    <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
+                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal-overview">
+            <div class="modal-overview-top">
+              <img class="modal-overview-top-logo" src="./assets/img/modal/image.jpg" alt="modal-logo">
+              <h3 class="modal-overview-top-header">Overview</h3>
+              <h4 class="modal-overview-top-subheader">Tour to Louvre</h4>
+              <div class="icon-wrap icon-wrap-first">
+                <img class="modal-overview-top-icon" src="./assets/svg/modal/date.svg" alt="modal-date">
+                <div class="modal-overview-top-descr">Friday, August 19</div>
+              </div>
+              <div class="icon-wrap">
+                <img class="modal-overview-top-icon" src="./assets/svg/modal/time.svg" alt="modal-time">
+                <div class="modal-overview-top-descr">16 : 30</div>
+              </div>
+              <div class="icon-wrap icon-wrap-last">
+                <img class="modal-overview-top-icon" src="./assets/svg/modal/tick.svg" alt="modal-tick">
+                <div class="modal-overview-top-descr">Temporary exhibition</div>
+              </div>
+            </div>
+
+            <div class="modal-overview-descr">
+              <div class="modal-overview-descr-wrapper">
+                <div class="modal-overview-descr-wrapper-item mb5">
+                  <div class="modal-overview-descr-wrapper-item-num">2</div>
+                  <div class="modal-overview-descr-wrapper-item-text">Basic (20 €)</div>
+                </div>
+                <div class="modal-overview-descr-wrapper-item-sum">40 €</div>
+              </div>
+
+              <div class="modal-overview-descr-wrapper mb10">
+                <div class="modal-overview-descr-wrapper-item">
+                  <div class="modal-overview-descr-wrapper-item-num">2</div>
+                  <div class="modal-overview-descr-wrapper-item-text">Senior (10 €)</div>
+                </div>
+                <div class="modal-overview-descr-wrapper-item-sum">20 €</div>
+              </div>
+
+              <div class="modal-overview-divider mb10"></div>
+
+              <div class="modal-overview-total-wrapper">
+                <div class="modal-overview-total-wrapper-text">Total:</div>
+                <div class="modal-overview-total-wrapper-sum">60 €</div>
+              </div>
+
+              <div class="modal-overview-cards">
+                <div class="modal-overview-top-card">
+                  <div class="modal-overview-top-card-num">Card number</div>
+                  <input class="modal-overview-top-card-num-input" type="text">
+
+                  <div class="modal-overview-top-card-date">Expiration date</div>
+                  <input class="modal-overview-top-card-date-input" type="number" placeholder="03">
+                  <input class="modal-overview-top-card-date-input" type="number" placeholder="2024">
+
+                  <div class="modal-overview-top-card-name">Cardholder name</div>
+                  <input class="modal-overview-top-card-name-input" type="text">
+
+                  <img src="./assets/svg/modal/Visa.svg" alt="visa" class="modal-overview-top-card-visa">
+                  <img src="./assets/svg/modal/Mastercard.svg" alt="mastercard" class="modal-overview-top-card-mastercard">
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </form>
+      </section>
   </main>
 
   <footer class="footer">
