@@ -272,7 +272,7 @@
           <div class="tickets-wrapper">
             <img src="assets/img/tickets/tickets.jpg" alt="tickets-img">
 
-            <form action="POST">
+            <div>
               <div class="tickets-rent-type">
                 <h3>Ticket Type</h3>
   
@@ -313,7 +313,7 @@
 
                 <button class="tickets-btn">Buy Now</button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </section>
@@ -337,127 +337,151 @@
           </div>
         </div>
       </section>
-      
-      <section class="section modal">
-        <form class="modal-form">
-          <div class="modal-booking">
-            <div class="modal-logo"><img src="./assets/svg/modal/logo.svg" alt="modal-logo"></div>
-            <h2 class="modal-title">Booking tickets</h2>
-            <div class="modal-subtitle">Tour to Louvre</div>
-            <div class="divider"></div>
-
-            <div class="modal-booking-inputs">
-              <div class="small-inputs-container">
-                <input class="small-input top-input" type="date" id="date">
-                <input class="small-input top-input" type="time" id="time">
-              </div>
-              <div class="input-block username-block">
-                <input class="modal-booking-text placeholder top-input" type="text" id="username" placeholder="Name">
-              </div>
-              <div class="input-block email-block">
-                <input class="modal-booking-email placeholder top-input" type="email" id="email" placeholder="E-mail">
-              </div>
-              <div class="input-block tel-block">
-                <input class="modal-booking-tel placeholder top-input" type="tel" id="phone" placeholder="Phone">
-              </div>
-              <div class="input-block ticket-type-block">
-                <select class="modal-booking-select placeholder top-input" name="ticket-type" id="ticket-type">
-                  <option value="0" disabled selected>Ticket Type</option>
-                  <option value="1">Permanent exhibition</option>
-                  <option value="2">Temporary exhibition</option>
-                  <option value="2">Combined exhibition</option>
-                </select>
-              </div>
-
-              <div class="modal-booking-tickets">
-                <div class="modal-booking-tickets-subheader">Entry ticket</div>
-                <div class="modal-booking-tickets-divider"></div>
-                <div class="modal-booking-buttons mb15">
-                  <div class="modal-booking-amount-descr">Basic 18+ (20 €)</div>
-                  <div class="modal-booking-block">
-                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                    <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
-                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                  </div>
-                </div>
-                <div class="modal-booking-buttons">
-                  <div class="modal-booking-amount-descr">Senior 65+ (10 €)</div>
-                  <div class="modal-booking-block">
-                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                    <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
-                    <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="modal-overview">
-            <div class="modal-overview-top">
-              <img class="modal-overview-top-logo" src="./assets/img/modal/image.jpg" alt="modal-logo">
-              <h3 class="modal-overview-top-header">Overview</h3>
-              <h4 class="modal-overview-top-subheader">Tour to Louvre</h4>
-              <div class="icon-wrap icon-wrap-first">
-                <img class="modal-overview-top-icon" src="./assets/svg/modal/date.svg" alt="modal-date">
-                <div class="modal-overview-top-descr">Friday, August 19</div>
-              </div>
-              <div class="icon-wrap">
-                <img class="modal-overview-top-icon" src="./assets/svg/modal/time.svg" alt="modal-time">
-                <div class="modal-overview-top-descr">16 : 30</div>
-              </div>
-              <div class="icon-wrap icon-wrap-last">
-                <img class="modal-overview-top-icon" src="./assets/svg/modal/tick.svg" alt="modal-tick">
-                <div class="modal-overview-top-descr">Temporary exhibition</div>
-              </div>
-            </div>
-
-            <div class="modal-overview-descr">
-              <div class="modal-overview-descr-wrapper">
-                <div class="modal-overview-descr-wrapper-item mb5">
-                  <div class="modal-overview-descr-wrapper-item-num">2</div>
-                  <div class="modal-overview-descr-wrapper-item-text">Basic (20 €)</div>
-                </div>
-                <div class="modal-overview-descr-wrapper-item-sum">40 €</div>
-              </div>
-
-              <div class="modal-overview-descr-wrapper mb10">
-                <div class="modal-overview-descr-wrapper-item">
-                  <div class="modal-overview-descr-wrapper-item-num">2</div>
-                  <div class="modal-overview-descr-wrapper-item-text">Senior (10 €)</div>
-                </div>
-                <div class="modal-overview-descr-wrapper-item-sum">20 €</div>
-              </div>
-
-              <div class="modal-overview-divider mb10"></div>
-
-              <div class="modal-overview-total-wrapper">
-                <div class="modal-overview-total-wrapper-text">Total:</div>
-                <div class="modal-overview-total-wrapper-sum">60 €</div>
-              </div>
-
-              <div class="modal-overview-cards">
-                <div class="modal-overview-top-card">
-                  <div class="modal-overview-top-card-num">Card number</div>
-                  <input class="modal-overview-top-card-num-input" type="text">
-
-                  <div class="modal-overview-top-card-date">Expiration date</div>
-                  <input class="modal-overview-top-card-date-input" type="number" placeholder="03">
-                  <input class="modal-overview-top-card-date-input" type="number" placeholder="2024">
-
-                  <div class="modal-overview-top-card-name">Cardholder name</div>
-                  <input class="modal-overview-top-card-name-input" type="text">
-
-                  <img src="./assets/svg/modal/Visa.svg" alt="visa" class="modal-overview-top-card-visa">
-                  <img src="./assets/svg/modal/Mastercard.svg" alt="mastercard" class="modal-overview-top-card-mastercard">
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </form>
-      </section>
   </main>
+
+  <div class="container">
+    <section class="section modal">
+      <span class="modal-close"></span>
+      <form class="modal-form">
+        <div class="modal-booking">
+          <div class="modal-logo"><img src="./assets/svg/modal/logo.svg" alt="modal-logo"></div>
+          <h2 class="modal-title">Booking tickets</h2>
+          <div class="modal-subtitle">Tour to Louvre</div>
+          <div class="divider"></div>
+
+          <div class="modal-booking-inputs">
+            <div class="small-inputs-container">
+              <input class="small-input top-input" type="date" id="date">
+              <input class="small-input top-input" type="time" id="time">
+            </div>
+            <div class="input-block username-block">
+              <input class="modal-booking-text placeholder top-input" type="text" id="username" placeholder="Name">
+            </div>
+            <div class="input-block email-block">
+              <input class="modal-booking-email placeholder top-input" type="email" id="email" placeholder="E-mail">
+            </div>
+            <div class="input-block tel-block">
+              <input class="modal-booking-tel placeholder top-input" type="tel" id="phone" placeholder="Phone">
+            </div>
+            <div class="input-block ticket-type-block">
+              <select class="modal-booking-select placeholder top-input" name="ticket-type" id="ticket-type">
+                <option value="0" disabled selected>Ticket Type</option>
+                <option value="1">Permanent exhibition</option>
+                <option value="2">Temporary exhibition</option>
+                <option value="2">Combined exhibition</option>
+              </select>
+            </div>
+
+            <div class="modal-booking-tickets">
+              <div class="modal-booking-tickets-subheader">Entry ticket</div>
+              <div class="modal-booking-tickets-divider"></div>
+              <div class="modal-booking-buttons mb15">
+                <div class="modal-booking-amount-descr">Basic 18+ (20 €)</div>
+                <div class="modal-booking-block">
+                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
+                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+              </div>
+              <div class="modal-booking-buttons">
+                <div class="modal-booking-amount-descr">Senior 65+ (10 €)</div>
+                <div class="modal-booking-block">
+                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
+                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal-overview">
+          <div class="modal-overview-top">
+            <img class="modal-overview-top-logo" src="./assets/img/modal/image.jpg" alt="modal-logo">
+            <h3 class="modal-overview-top-header">Overview</h3>
+            <h4 class="modal-overview-top-subheader">Tour to Louvre</h4>
+            <div class="icon-wrap icon-wrap-first">
+              <img class="modal-overview-top-icon" src="./assets/svg/modal/date.svg" alt="modal-date">
+              <div class="modal-overview-top-descr">Friday, August 19</div>
+            </div>
+            <div class="icon-wrap">
+              <img class="modal-overview-top-icon" src="./assets/svg/modal/time.svg" alt="modal-time">
+              <div class="modal-overview-top-descr">16 : 30</div>
+            </div>
+            <div class="icon-wrap icon-wrap-last">
+              <img class="modal-overview-top-icon" src="./assets/svg/modal/tick.svg" alt="modal-tick">
+              <div class="modal-overview-top-descr">Temporary exhibition</div>
+            </div>
+          </div>
+
+          <div class="modal-overview-descr">
+            <div class="modal-overview-descr-wrapper">
+              <div class="modal-overview-descr-wrapper-item mb5">
+                <div class="modal-overview-descr-wrapper-item-num">2</div>
+                <div class="modal-overview-descr-wrapper-item-text">Basic (20 €)</div>
+              </div>
+              <div class="modal-overview-descr-wrapper-item-sum">40 €</div>
+            </div>
+
+            <div class="modal-overview-descr-wrapper mb10">
+              <div class="modal-overview-descr-wrapper-item">
+                <div class="modal-overview-descr-wrapper-item-num">2</div>
+                <div class="modal-overview-descr-wrapper-item-text">Senior (10 €)</div>
+              </div>
+              <div class="modal-overview-descr-wrapper-item-sum">20 €</div>
+            </div>
+
+            <div class="modal-overview-divider mb10"></div>
+
+            <div class="modal-overview-total-wrapper">
+              <div class="modal-overview-total-wrapper-text">Total:</div>
+              <div class="modal-overview-total-wrapper-sum">60 €</div>
+            </div>
+
+            <div class="modal-overview-cards">
+              <div class="modal-overview-top-card modal-overview-cards-item">
+                <div class="modal-overview-top-card-num">Card number</div>
+                <input class="modal-overview-top-card-num-input" type="text">
+
+                <div class="modal-overview-top-card-date">Expiration date</div>
+                <div class="modal-overview-top-card-date-container">
+                  <div class="modal-overview-top-card-date-wrapper">
+                    <button class="modal-overview-top-card-date-wrapper-inc" type="button" onclick="this.nextElementSibling.stepUp()">&#9650;</button>
+                    <input class="modal-overview-top-card-date-input modal-overview-top-card-date-input-month" type="number" min="1" max="12" value="03">
+                    <button class="modal-overview-top-card-date-wrapper-dec" type="button" onclick="this.previousElementSibling.stepDown()">&#9660;</button>
+                  </div>
+
+                  <div class="modal-overview-top-card-date-wrapper">
+                    <button class="modal-overview-top-card-date-wrapper-inc" type="button" onclick="this.nextElementSibling.stepUp()">&#9650;</button>
+                    <input class="modal-overview-top-card-date-input input-year" type="number" min="2021" value="2024">
+                    <button class="modal-overview-top-card-date-wrapper-dec" type="button" onclick="this.previousElementSibling.stepDown()">&#9660;</button>
+                  </div>
+                </div>
+
+                <div class="modal-overview-top-card-name">Cardholder name</div>
+                <input class="modal-overview-top-card-name-input" type="text">
+
+                <img src="./assets/svg/modal/Visa.svg" alt="visa" class="modal-overview-top-card-visa">
+                <img src="./assets/svg/modal/Mastercard.svg" alt="mastercard" class="modal-overview-top-card-mastercard">
+              </div>
+
+              <div class="modal-overview-bottom-card modal-overview-cards-item">
+                <div class="modal-overview-bottom-card-line"></div>
+                <div class="modal-overview-bottom-card-text">
+                  <div class="modal-overview-bottom-card-text-descr">CVC/CVV</div>
+                  <input class="modal-overview-bottom-card-text-input" type="text">
+                  <div class="modal-overview-bottom-card-text-small">The last 3 or 4 digits on back of the card</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <input class="modal-submit" type="submit" value="Book">
+        </div>
+      </form>
+    </section>
+  </div>
+  <div class="overlay"></div>
 
   <footer class="footer">
     <div class="container">
