@@ -320,7 +320,7 @@
             </div>
           </div>
 
-          <div class="video-slider">
+          <!-- <div class="video-slider">
             <div class="video-slider-iframes">
               <div class="video-slider-inner">
 
@@ -365,7 +365,7 @@
                 </svg>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
   
@@ -410,17 +410,17 @@
                 <h3>Ticket Type</h3>
   
                 <label class="label">Permanent exhibition
-                  <input type="radio" checked name="radio">
+                  <input class="rent-type-mark" type="radio" checked name="radio" data-price="20">
                   <span class="checkmark"></span>
                 </label>
   
                 <label class="label">Temporary exhibition
-                  <input type="radio" name="radio">
+                  <input class="rent-type-mark" type="radio" name="radio" data-price="25">
                   <span class="checkmark"></span>
                 </label>
   
                 <label class="label">Combined Admission
-                  <input type="radio" name="radio">
+                  <input class="rent-type-mark" type="radio" name="radio" data-price="40">
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -429,19 +429,19 @@
                 <h3>Amount</h3>
                 <div class="tickets-rent-amount-descr tickets-rent-amount-descr-first">Basic 18+</div>
                 <div class="tickets-rent-amount-number">
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input class="tickets-rent-amount-number-input" type="number" min="0" max="20" value="1" readonly>
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="tickets-rent-amount-number-btn down-btn-basic" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input class="tickets-rent-amount-number-input tickets-rent-amount-number-input-basic" type="number" min="0" max="20" value="1" readonly>
+                  <button class="tickets-rent-amount-number-btn up-btn-basic" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
                 
                 <div class="tickets-rent-amount-descr tickets-rent-amount-descr-second">Senior 65+</div>
                 <div class="tickets-rent-amount-number">
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input class="tickets-rent-amount-number-input" type="number" min="0" max="20" value="1" readonly>
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="tickets-rent-amount-number-btn down-btn-senior" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input class="tickets-rent-amount-number-input tickets-rent-amount-number-input-senior" type="number" min="0" max="20" value="1" readonly>
+                  <button class="tickets-rent-amount-number-btn up-btn-senior" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
 
-                <div class="total">Total €220</div>
+                <div class="total"> <span class="total-letters">Total €</span> <span class="total-numbers">220</span></div>
                 <div class="total total-space">
                   <div class="total-space-first">Total €</div>
                   <div class="total-space-second">220</div>
@@ -503,8 +503,8 @@
               <div class="custom-select">
                 <select class="modal-booking-select placeholder top-input" name="ticket-type" id="ticket-type">
                   <option class="disable" value="0" disabled selected>Ticket Type</option>
-                  <option value="1">Permanent exhibition</option>
-                  <option value="2">Temporary exhibition</option>
+                  <option value="0">Permanent exhibition</option>
+                  <option value="1">Temporary exhibition</option>
                   <option value="2">Combined Admission</option>
                 </select>
               </div>
@@ -516,17 +516,17 @@
               <div class="modal-booking-buttons mb15">
                 <div class="modal-booking-amount-descr">Basic 18+ (20 €)</div>
                 <div class="modal-booking-block">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="modal-amount-btn modal-booking-block-item down-btn-basic-form" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item modal-amount-number-input-basic">
+                  <button class="modal-amount-btn modal-booking-block-item up-btn-basic-form" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
               </div>
               <div class="modal-booking-buttons">
                 <div class="modal-booking-amount-descr">Senior 65+ (10 €)</div>
                 <div class="modal-booking-block">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="modal-amount-btn modal-booking-block-item down-btn-senior-form" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item modal-amount-number-input-senior">
+                  <button class="modal-amount-btn modal-booking-block-item up-btn-senior-form" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
               </div>
             </div>
@@ -541,7 +541,7 @@
             <h4 class="modal-overview-top-subheader">Tour to Louvre</h4>
             <div class="icon-wrap icon-wrap-first">
               <img class="modal-overview-top-icon" src="./assets/svg/modal/date.svg" alt="modal-date">
-              <div class="modal-overview-top-descr">Friday, August 19</div>
+              <div class="modal-overview-top-descr modal-overview-date">Friday, August 19</div>
             </div>
             <div class="icon-wrap">
               <img class="modal-overview-top-icon" src="./assets/svg/modal/time.svg" alt="modal-time">
@@ -549,25 +549,25 @@
             </div>
             <div class="icon-wrap icon-wrap-last">
               <img class="modal-overview-top-icon" src="./assets/svg/modal/tick.svg" alt="modal-tick">
-              <div class="modal-overview-top-descr">Temporary exhibition</div>
+              <div class="modal-overview-top-descr modal-overview-ticket-type">Temporary exhibition</div>
             </div>
           </div>
 
           <div class="modal-overview-descr">
             <div class="modal-overview-descr-wrapper">
               <div class="modal-overview-descr-wrapper-item mb5">
-                <div class="modal-overview-descr-wrapper-item-num">2</div>
+                <div class="modal-overview-descr-wrapper-item-num overview-basic-number">2</div>
                 <div class="modal-overview-descr-wrapper-item-text">Basic (20 €)</div>
               </div>
-              <div class="modal-overview-descr-wrapper-item-sum">40 €</div>
+              <div class="modal-overview-descr-wrapper-item-sum overview-basic-number-sum">40 €</div>
             </div>
 
             <div class="modal-overview-descr-wrapper mb10">
               <div class="modal-overview-descr-wrapper-item">
-                <div class="modal-overview-descr-wrapper-item-num">2</div>
+                <div class="modal-overview-descr-wrapper-item-num overview-senior-number">2</div>
                 <div class="modal-overview-descr-wrapper-item-text">Senior (10 €)</div>
               </div>
-              <div class="modal-overview-descr-wrapper-item-sum">20 €</div>
+              <div class="modal-overview-descr-wrapper-item-sum overview-senior-number-sum">20 €</div>
             </div>
 
             <div class="modal-overview-divider mb10"></div>
