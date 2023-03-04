@@ -9,11 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="style.css">
   <title>museum</title>
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="up">
     <div class="container">
       <nav class="header-nav">
         <div class="header-logo">
@@ -41,7 +44,126 @@
 
   <main class="main">
       <section class="section welcome" id="welcome">
-        <div class="container slide1" id="slider">
+        <div class="container">
+          <div class="carousel" id="slider">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/img/welcome-slider/1.jpg" alt="mona-lisa" class="carousel-item-img">
+                <div class="carousel-item-shade"></div>
+                <img class="like-img like-img1" src="./assets/svg/like.svg" alt="like">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/img/welcome-slider/2.jpg" alt="liberty" class="carousel-item-img">
+                <div class="carousel-item-shade"></div>
+                <img class="like-img like-img2" src="./assets/svg/like.svg" alt="like">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/img/welcome-slider/3.jpg" alt="la-belle" class="carousel-item-img">
+                <div class="carousel-item-shade"></div>
+                <img class="like-img like-img3" src="./assets/svg/like.svg" alt="like">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/img/welcome-slider/4.jpg" alt="raft-of-medusa" class="carousel-item-img">
+                <div class="carousel-item-shade"></div>
+                <img class="like-img like-img4" src="./assets/svg/like.svg" alt="like">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/img/welcome-slider/5.jpg" alt="the-astronomer" class="carousel-item-img">
+                <div class="carousel-item-shade"></div>
+                <img class="like-img like-img5" src="./assets/svg/like.svg" alt="like">
+              </div>
+            </div>
+
+            <div class="slider-panel">
+              <div class="slider-like">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                  <g>
+                    <path class="like-icon-path" d="M512,304.021c0-12.821-5.099-24.768-13.867-33.6c9.963-10.901,15.019-25.536,13.632-40.725
+                      c-2.475-27.115-26.923-48.363-55.616-48.363H324.395c6.485-19.819,16.939-56.149,16.939-85.333c0-46.272-39.317-85.333-64-85.333
+                      c-22.165,0-38.016,12.459-38.677,12.992c-2.539,2.048-3.989,5.099-3.989,8.341v72.32l-61.44,133.141l-2.56,1.28v-4.075
+                      c0-5.888-4.779-10.667-10.667-10.667H53.333C23.936,224,0,247.936,0,277.333V448c0,29.397,23.936,53.333,53.333,53.333h64
+                      c23.083,0,42.773-14.72,50.219-35.243c17.749,9.131,41.643,13.931,56.469,13.931H419.84c23.232,0,43.541-15.68,48.32-37.269
+                      c2.453-11.115,1.024-22.315-3.84-32.043c15.744-7.936,26.347-24.171,26.347-42.688c0-7.552-1.728-14.784-5.013-21.333
+                      C501.397,338.752,512,322.517,512,304.021z M149.333,448c0,17.643-14.379,32-32,32h-64c-17.664,0-32-14.357-32-32V277.333
+                      c0-17.643,14.357-32,32-32v0.107h95.957v10.667c0,0.064,0.043,0.107,0.043,0.171V448z M466.987,330.368
+                      c-4.117,0.469-7.595,3.264-8.896,7.211c-1.301,3.925-0.235,8.277,2.795,11.115c5.44,5.141,8.427,12.011,8.427,19.349
+                      c0,13.44-10.155,24.768-23.637,26.304c-4.117,0.469-7.595,3.264-8.896,7.211c-1.301,3.925-0.235,8.277,2.795,11.115
+                      c7.04,6.635,9.856,15.936,7.744,25.472c-2.624,11.883-14.187,20.523-27.499,20.523H224c-15.851,0-41.365-6.848-53.333-15.744
+                      V262.656l15.381-7.68c2.155-1.088,3.883-2.88,4.907-5.077l64-138.667c0.64-1.387,0.981-2.923,0.981-4.459V37.909
+                      c4.437-2.453,12.139-5.803,21.333-5.803c11.691,0,42.667,29.077,42.667,64c0,37.525-20.416,91.669-20.629,92.203
+                      c-1.237,3.264-0.811,6.955,1.195,9.835c2.005,2.88,5.269,4.608,8.789,4.608h146.795c17.792,0,32.896,12.715,34.389,28.971
+                      c1.131,12.16-4.672,23.723-15.168,30.187c-3.285,2.005-5.205,5.653-5.056,9.493c0.128,3.84,2.347,7.296,5.781,9.067
+                      c9.003,4.608,14.592,13.653,14.592,23.595C490.603,317.504,480.448,328.832,466.987,330.368z"/>
+                  </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                </svg>
+              </div>
+
+              <div class="slider-panel-numbers">
+                <div class="slider-panel-numbers-current">01</div>
+                <div class="slider-panel-numbers-divider">|</div>
+                <div class="slider-panel-numbers-general">05</div>
+              </div>
+
+              <div class="slider-panel-dots">
+                <div class="slider-panel-dots-item dot-active" data-id="1"></div>
+                <div class="slider-panel-dots-item" data-id="2"></div>
+                <div class="slider-panel-dots-item" data-id="3"></div>
+                <div class="slider-panel-dots-item" data-id="4"></div>
+                <div class="slider-panel-dots-item" data-id="5"></div>
+              </div>
+
+              <div class="slider-panel-arrows">
+                <div class="slider-panel-arrows-prev">
+                  <svg class="arrow-welcome" width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.72254 8C3.90173 6.31339 1.99422 5.08262 0 4.30769V3.69231C1.99422 2.89459 3.90173 1.66382 5.72254 0H7.23988C6.37283 1.4359 5.53468 2.52991 4.72543 3.28205H30V4.71795H4.72543C5.53468 5.47009 6.37283 6.5641 7.23988 8H5.72254Z" fill="white"/>
+                  </svg>
+                </div>
+                <div class="slider-panel-arrows-next">
+                  <svg class="arrow-welcome" width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.2775 1.97284e-06C26.0983 1.68661 28.0058 2.91738 30 3.69231L30 4.30769C28.0058 5.10541 26.0983 6.33618 24.2775 8L22.7601 8C23.6272 6.5641 24.4653 5.47009 25.2746 4.71795L3.48964e-07 4.71795L5.01636e-07 3.28205L25.2746 3.28205C24.4653 2.52992 23.6272 1.4359 22.7601 1.86378e-06L24.2775 1.97284e-06Z" fill="white"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="menu">
             <div class="menu-container">
               <ul class="menu-list">
@@ -99,43 +221,16 @@
                 </li>
               </ul>
           </div>
-            .
+            
           </div>
           <div class="welcome-content">
             <div class="welcome-text">
-              <div class="additional-height"></div>
-              <h1 class="section-title">Welcome <br> to the Louvre</h1>
-              <h2 class="dark-title">From the castle to the museum</h2>
+              <div class="ignore-pointer">
+                <div class="additional-height"></div>
+                <h1 class="section-title">Welcome <br> to the Louvre</h1>
+                <h2 class="dark-title">From the castle to the museum</h2>
+              </div>
               <a class="button welcome-btn" href="assets/tours/tour7.html" target="_blank"><span>Discover the Louvre</span></a>
-            </div>
-
-            <div class="slider-panel">
-              <div class="slider-panel-numbers">
-                <div class="slider-panel-numbers-current">01</div>
-                <div class="slider-panel-numbers-divider">|</div>
-                <div class="slider-panel-numbers-general">05</div>
-              </div>
-
-              <div class="slider-panel-dots">
-                <div class="slider-panel-dots-item dot-active" data-id="1"></div>
-                <div class="slider-panel-dots-item" data-id="2"></div>
-                <div class="slider-panel-dots-item" data-id="3"></div>
-                <div class="slider-panel-dots-item" data-id="4"></div>
-                <div class="slider-panel-dots-item" data-id="5"></div>
-              </div>
-
-              <div class="slider-panel-arrows">
-                <div class="slider-panel-arrows-prev">
-                  <svg class="arrow-welcome" width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.72254 8C3.90173 6.31339 1.99422 5.08262 0 4.30769V3.69231C1.99422 2.89459 3.90173 1.66382 5.72254 0H7.23988C6.37283 1.4359 5.53468 2.52991 4.72543 3.28205H30V4.71795H4.72543C5.53468 5.47009 6.37283 6.5641 7.23988 8H5.72254Z" fill="white"/>
-                  </svg>
-                </div>
-                <div class="slider-panel-arrows-next">
-                  <svg class="arrow-welcome" width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24.2775 1.97284e-06C26.0983 1.68661 28.0058 2.91738 30 3.69231L30 4.30769C28.0058 5.10541 26.0983 6.33618 24.2775 8L22.7601 8C23.6272 6.5641 24.4653 5.47009 25.2746 4.71795L3.48964e-07 4.71795L5.01636e-07 3.28205L25.2746 3.28205C24.4653 2.52992 23.6272 1.4359 22.7601 1.86378e-06L24.2775 1.97284e-06Z" fill="white"/>
-                  </svg>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -214,8 +309,12 @@
           </div>
 
           <div class="explore-img">
-            <img class="explore-after" src="assets/img/explore-slider/after.jpg" alt="explore-after">
-            <img class="explore-before" src="assets/img/explore-slider/before.jpg" alt="explore-before">
+            <div class="explore-img-item" explore-after>
+              <img src="assets/img/explore-slider/after.jpg" alt="explore-after" width="720" height="700">
+            </div>
+            <div class="explore-img-item explore-item-overlay">
+              <img src="assets/img/explore-slider/before.jpg" alt="explore-before" width="720" height="700">
+            </div>
             <div class="explore-element">
               <div class="explore-element-line first"></div>
               <div class="explore-element-round"></div>
@@ -234,8 +333,11 @@
           </div>
 
           <div class="video-wrapper">
-            <video src="assets/video/video0.mp4" poster="assets/video/poster0.jpg">
+            <video class="video-player" src="./assets/video/video0.mp4" poster="./assets/video/poster0.jpg" id="main-video">
             </video>
+            <div class="video-speedrate">
+              
+            </div>
               <div class="big-play">
                 <svg class="big-play-svg" width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23 15.0051L0 0C0 22.6144 0 11.5158 0 30L23 15.0051Z" fill="#B3B3B3"/>
@@ -243,25 +345,37 @@
               </div>
             <div class="video-controls">
               <button class="video-play-btn" type="button">
-                <svg class="video-play-btn-svg" width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="video-play-btn-svg video-play-btn-svg-play" width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M23 15.0051L0 0C0 22.6144 0 11.5158 0 30L23 15.0051Z" fill="#B3B3B3"/>
                 </svg>
+                <svg class="video-play-btn-svg video-play-btn-svg-pause" style="display: none;" width="21" height="30" viewBox="0 0 21 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 29.0471V0.944802C8 0.421605 7.55026 0 6.98347 0H1.01653C0.449742 0 0 0.421605 0 0.944802V29.0471C0 29.5703 0.449742 30 1.01653 30H6.98347C7.55026 30 8 29.5784 8 29.0471Z" fill="#B3B3B3"/>
+                <path d="M19.9835 0H14.0165C13.4584 0 13 0.421605 13 0.944802V29.0471C13 29.5703 13.4497 30 14.0165 30H19.9835C20.5416 30 21 29.5784 21 29.0471V0.944802C21 0.421605 20.5503 0 19.9835 0Z" fill="#B3B3B3"/>
+                </svg>
               </button>
-              <input class="video-progress progress" type="range" value="55" min="0" step="1" style="background: linear-gradient(to right, rgb(113, 7, 7) 0%, rgb(113, 7, 7) 55%, rgb(196, 196, 196) 55%, rgb(196, 196, 196) 100%);">
+              <input class="video-progress progress" type="range" value="0" min="0" step="1" style="background: linear-gradient(to right, rgb(113, 7, 7) 0%, rgb(113, 7, 7) 0%, rgb(196, 196, 196) 0%, rgb(196, 196, 196) 100%);">
               <button class="video-volume-btn" type="button">
-                <svg class="video-volume-btn-svg" width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="video-volume-btn-svg video-volume-btn-svg-volume" width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.3326 0C17.8816 0 17.4905 0.156374 17.1604 0.469123L8.48928 8.68426H1.66737C1.21531 8.68426 0.825273 8.84064 0.495164 9.15339C0.165055 9.46614 0 9.83665 0 10.2639V19.7361C0 20.1633 0.165055 20.5339 0.495164 20.8466C0.825273 21.1594 1.21636 21.3157 1.66737 21.3157H8.48928L17.1604 29.5309C17.4905 29.8436 17.8806 30 18.3326 30C18.7847 30 19.1747 29.8436 19.5048 29.5309C19.8349 29.2181 20 28.8486 20 28.4203V1.57968C20 1.15239 19.8349 0.781873 19.5059 0.469123C19.1768 0.156374 18.7857 0 18.3337 0H18.3326Z" fill="#B3B3B3"/>
                 <path d="M28.0399 18.515C28.7419 17.434 29.0929 16.266 29.0929 15.01C29.0929 13.754 28.7419 12.582 28.0399 11.492C27.3379 10.402 26.4099 9.63396 25.2529 9.18796C25.0879 9.10596 24.8809 9.06396 24.6339 9.06396C24.2049 9.06396 23.8329 9.21697 23.5189 9.52197C23.2049 9.82897 23.0479 10.203 23.0479 10.649C23.0479 10.996 23.1469 11.289 23.3459 11.528C23.5449 11.767 23.7829 11.974 24.0639 12.147C24.3439 12.32 24.6249 12.51 24.9059 12.717C25.1869 12.924 25.4259 13.216 25.6239 13.596C25.8219 13.976 25.9209 14.447 25.9209 15.008C25.9209 15.569 25.8219 16.04 25.6239 16.42C25.4259 16.8 25.1869 17.093 24.9059 17.299C24.6249 17.505 24.3439 17.696 24.0639 17.869C23.7829 18.042 23.5439 18.249 23.3459 18.488C23.1479 18.727 23.0479 19.021 23.0479 19.367C23.0479 19.813 23.2059 20.188 23.5189 20.494C23.8329 20.798 24.2039 20.953 24.6339 20.953C24.8809 20.953 25.0879 20.912 25.2529 20.829C26.4089 20.366 27.3379 19.594 28.0399 18.512V18.515Z" fill="#B3B3B3"/>
                 <path d="M33.8744 22.1208C35.2915 19.9463 36 17.5714 36 14.999C36 12.4276 35.2915 10.0547 33.8744 7.87713C32.4574 5.70262 30.5822 4.11727 28.2497 3.12618C28.0337 3.04274 27.8167 3 27.5997 3C27.1667 3 26.7913 3.15976 26.4744 3.47927C26.1574 3.79878 26 4.17629 26 4.61384C26 5.26914 26.325 5.76469 26.975 6.1015C27.9075 6.58891 28.5414 6.95828 28.8744 7.21063C30.1078 8.11829 31.0707 9.25592 31.762 10.6255C32.4534 11.9952 32.7996 13.4523 32.7996 15C32.7996 16.5457 32.4534 18.0038 31.762 19.3745C31.0707 20.7441 30.1078 21.8817 28.8744 22.7894C28.5414 23.0417 27.9075 23.4111 26.975 23.8985C26.325 24.2353 26 24.7298 26 25.3862C26 25.8227 26.1585 26.2012 26.4744 26.5207C26.7903 26.8402 27.1738 27 27.6239 27C27.8238 27 28.0327 26.9573 28.2487 26.8738C30.5811 25.8817 32.4574 24.2984 33.8734 22.1219L33.8744 22.1208Z" fill="#B3B3B3"/>
                 </svg>
+                <svg class="video-volume-btn-svg video-volume-btn-svg-mute" style="display: none;" width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32.2053 15L35.6703 11.535C35.8901 11.3152 36 11.0474 36 10.7337C36 10.4199 35.8901 10.1522 35.6703 9.93234L34.0677 8.32972C33.8478 8.10991 33.5801 8 33.2663 8C32.9526 8 32.6848 8.10991 32.465 8.32972L29 11.7947L25.535 8.32972C25.3152 8.10991 25.0474 8 24.7337 8C24.4199 8 24.1522 8.10991 23.9323 8.32972L22.3297 9.93234C22.1099 10.1522 22 10.4199 22 10.7337C22 11.0474 22.1099 11.3152 22.3297 11.535L25.7947 15L22.3297 18.465C22.1099 18.6848 22 18.9526 22 19.2663C22 19.5801 22.1099 19.8478 22.3297 20.0677L23.9323 21.6703C24.1522 21.8901 24.4199 22 24.7337 22C25.0474 22 25.3152 21.8901 25.535 21.6703L29 18.2053L32.465 21.6703C32.6848 21.8901 32.9516 22 33.2663 22C33.5811 22 33.8478 21.8901 34.0677 21.6703L35.6703 20.0677C35.8901 19.8478 36 19.5801 36 19.2663C36 18.9526 35.8901 18.6848 35.6703 18.465L32.2053 15Z" fill="#B3B3B3"/>
+                  <path d="M18.3326 0C17.8816 0 17.4905 0.156374 17.1604 0.469123L8.48928 8.68426H1.66737C1.21531 8.68426 0.825273 8.84064 0.495164 9.15339C0.165055 9.46614 0 9.83665 0 10.2639V19.7361C0 20.1633 0.165055 20.5339 0.495164 20.8466C0.825273 21.1594 1.21636 21.3157 1.66737 21.3157H8.48928L17.1604 29.5309C17.4905 29.8436 17.8806 30 18.3326 30C18.7847 30 19.1747 29.8436 19.5048 29.5309C19.8349 29.2181 20 28.8486 20 28.4203V1.57968C20 1.15239 19.8349 0.781873 19.5059 0.469123C19.1768 0.156374 18.7857 0 18.3337 0H18.3326Z" fill="#B3B3B3"/>
+                  </svg>
+                  
               </button>
-              <input class="video-volume progress" type="range" value="40" min="0" step="1" style="background: linear-gradient(to right, rgb(113, 7, 7) 0%, rgb(113, 7, 7) 40%, rgb(196, 196, 196) 40%, rgb(196, 196, 196) 100%);">
+              <input class="video-volume progress" type="range" value="20" min="0" step="1" style="background: linear-gradient(to right, rgb(113, 7, 7) 0%, rgb(113, 7, 7) 20%, rgb(196, 196, 196) 20%, rgb(196, 196, 196) 100%);">
               <button class="video-fullscreen-btn" type="button">
-                <svg class="video-fullscreen-btn-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.744 31.7534H23.2432V35.9999H35.9995V23.2402H31.744V31.7534Z" fill="#B3B3B3"/>
-                <path d="M4.25546 23.2402H0V35.9999H12.7563V31.7534H4.25546V23.2402Z" fill="#B3B3B3"/>
-                <path d="M0 12.7597H4.25546V4.25656H12.7563V0H0V12.7597Z" fill="#B3B3B3"/>
-                <path d="M23.2432 0V4.25656H31.744V12.7597H35.9995V0H23.2432Z" fill="#B3B3B3"/>
+                <svg class="video-fullscreen-btn-svg video-fullscreen-btn-svg-fullscreen" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M31.744 31.7534H23.2432V35.9999H35.9995V23.2402H31.744V31.7534Z" fill="#B3B3B3"/>
+                  <path d="M4.25546 23.2402H0V35.9999H12.7563V31.7534H4.25546V23.2402Z" fill="#B3B3B3"/>
+                  <path d="M0 12.7597H4.25546V4.25656H12.7563V0H0V12.7597Z" fill="#B3B3B3"/>
+                  <path d="M23.2432 0V4.25656H31.744V12.7597H35.9995V0H23.2432Z" fill="#B3B3B3"/>
+                </svg>
+                <svg class="video-fullscreen-btn-svg video-fullscreen-btn-svg-smallscreen" style="display: none;" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M28.2554 7.74495H35.9764V12.8119H23.1874V0.0229492H28.2544V7.74395L28.2554 7.74495ZM23.1884 35.976V23.1869H35.9774V28.2539H28.2564V35.9749H23.1894L23.1884 35.976ZM7.74544 7.74495V0.0239492H12.8124V12.8129H0.0234375V7.74595H7.74444L7.74544 7.74495ZM0.0244375 28.2549V23.1879H12.8134V35.977H7.74644V28.2559H0.0254375L0.0244375 28.2549Z" fill="#B3B3B3"/>
                 </svg>
               </button>
             </div>
@@ -270,34 +384,43 @@
           <div class="video-slider">
             <div class="video-slider-iframes">
               <div class="video-slider-inner">
-                <div class="video-iframes-item">
-                  <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                
 
                 <div class="video-iframes-item">
-                  <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  <iframe class="ifr" src="https://www.youtube.com/embed/zp1BXPX8jcU?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
-                
+
                 <div class="video-iframes-item">
-                  <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                  <iframe class="ifr" src="https://www.youtube.com/embed/Vi5D6FKhRmo?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
+
+                <div class="video-iframes-item">
+                  <iframe class="ifr" src="https://www.youtube.com/embed/NOhDysLnTvY?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <div class="video-iframes-item">
+                  <iframe class="ifr" src="https://www.youtube.com/embed/aWmJ5DgyWPI?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <div class="video-iframes-item">
+                  <iframe class="ifr" src="https://www.youtube.com/embed/2OR0OCr6uRE?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+
               </div>
             </div>
             <div class="video-slider-panel">
-              <div class="video-slider-left-arrow">
+              <div class="video-slider-left-arrow control-arrow">
                 <svg class="video-arrow" width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.4777 0.219168C5.87773 0.564178 5.94259 1.19347 5.62256 1.62473L2.37578 6.00004L5.62256 10.3753C5.94259 10.8066 5.87773 11.4359 5.4777 11.7809C5.07766 12.1259 4.49394 12.056 4.17391 11.6247L0 6.00004L4.17391 0.375342C4.49394 -0.0559202 5.07766 -0.125842 5.4777 0.219168ZM9.65184 0.219168C10.0519 0.564178 10.1167 1.19347 9.7967 1.62473L6.54992 6.00004L9.7967 10.3753C10.1167 10.8066 10.0519 11.4359 9.65184 11.7809C9.2518 12.1259 8.66808 12.056 8.34805 11.6247L4.17414 6.00004L8.34805 0.375342C8.66808 -0.0559202 9.2518 -0.125842 9.65184 0.219168Z" fill="#999999"/>
                 </svg>
               </div>
               <div class="video-panel-dots">
-                <div class="video-panel-dots-item video-panel-dots-item" data-id="0"></div>
-                <div class="video-panel-dots-item" data-id="1"></div>
-                <div class="video-panel-dots-item" data-id="2"></div>
-                <div class="video-panel-dots-item" data-id="3"></div>
-                <div class="video-panel-dots-item" data-id="4"></div>
+                <div class="video-panel-dots-item dot-active"></div>
+                <div class="video-panel-dots-item"></div>
+                <div class="video-panel-dots-item"></div>
+                <div class="video-panel-dots-item"></div>
+                <div class="video-panel-dots-item"></div>
               </div>
-              <div class="video-slider-right-arrow">
+              <div class="video-slider-right-arrow control-arrow">
                 <svg class="video-arrow" width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.348163 0.219168C0.748196 -0.125842 1.33192 -0.0559202 1.65195 0.375342L5.82586 6.00004L1.65194 11.6247C1.33192 12.056 0.748195 12.1259 0.348162 11.7809C-0.0518709 11.4359 -0.116729 10.8066 0.203297 10.3753L3.45008 6.00004L0.203298 1.62473C-0.116728 1.19347 -0.05187 0.564177 0.348163 0.219168ZM4.5223 0.219168C4.92234 -0.125841 5.50606 -0.0559197 5.82609 0.375342L10 6.00004L5.82609 11.6247C5.50606 12.056 4.92234 12.1259 4.5223 11.7809C4.12227 11.4359 4.05741 10.8066 4.37744 10.3753L7.62422 6.00004L4.37744 1.62473C4.05741 1.19347 4.12227 0.564178 4.5223 0.219168Z" fill="#999999"/>
                 </svg>
@@ -315,7 +438,7 @@
 
           <div class="pictures-container">
             <div class="pictures-inner-container">
-              <img class="pictures-inner-container-item" src="./assets/img/galery/galery1.jpg" alt="galery-img-1">
+              <img class="pictures-inner-container-item first-item" src="./assets/img/galery/galery1.jpg" alt="galery-img-1">
               <img class="pictures-inner-container-item" src="./assets/img/galery/galery2.jpg" alt="galery-img-2">
               <img class="pictures-inner-container-item" src="./assets/img/galery/galery3.jpg" alt="galery-img-3">
               <img class="pictures-inner-container-item" src="./assets/img/galery/galery4.jpg" alt="galery-img-4">
@@ -348,17 +471,17 @@
                 <h3>Ticket Type</h3>
   
                 <label class="label">Permanent exhibition
-                  <input type="radio" checked name="radio">
+                  <input class="rent-type-mark" type="radio" checked name="radio" data-price="20">
                   <span class="checkmark"></span>
                 </label>
   
                 <label class="label">Temporary exhibition
-                  <input type="radio" name="radio">
+                  <input class="rent-type-mark" type="radio" name="radio" data-price="25">
                   <span class="checkmark"></span>
                 </label>
   
                 <label class="label">Combined Admission
-                  <input type="radio" name="radio">
+                  <input class="rent-type-mark" type="radio" name="radio" data-price="40">
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -367,19 +490,19 @@
                 <h3>Amount</h3>
                 <div class="tickets-rent-amount-descr tickets-rent-amount-descr-first">Basic 18+</div>
                 <div class="tickets-rent-amount-number">
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input class="tickets-rent-amount-number-input" type="number" min="0" max="20" value="1" readonly>
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="tickets-rent-amount-number-btn down-btn-basic" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input class="tickets-rent-amount-number-input tickets-rent-amount-number-input-basic" type="number" min="0" max="20" value="1" readonly>
+                  <button class="tickets-rent-amount-number-btn up-btn-basic" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
                 
                 <div class="tickets-rent-amount-descr tickets-rent-amount-descr-second">Senior 65+</div>
                 <div class="tickets-rent-amount-number">
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input class="tickets-rent-amount-number-input" type="number" min="0" max="20" value="1" readonly>
-                  <button class="tickets-rent-amount-number-btn" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="tickets-rent-amount-number-btn down-btn-senior" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input class="tickets-rent-amount-number-input tickets-rent-amount-number-input-senior" type="number" min="0" max="20" value="1" readonly>
+                  <button class="tickets-rent-amount-number-btn up-btn-senior" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
 
-                <div class="total">Total €220</div>
+                <div class="total"> <span class="total-letters">Total €</span> <span class="total-numbers">220</span></div>
                 <div class="total total-space">
                   <div class="total-space-first">Total €</div>
                   <div class="total-space-second">220</div>
@@ -407,7 +530,7 @@
               </address>
             </div>
   
-            <img class="contacts-map" src="assets/img/contacts/map.jpg" alt="contacts-map">
+            <div id='map' style='width: 960px; height: 620px;'></div>
           </div>
         </div>
       </section>
@@ -426,23 +549,26 @@
           <div class="modal-booking-inputs">
             <div class="small-inputs-container">
               <input class="small-input top-input" type="date" id="date">
-              <input class="small-input top-input" type="time" id="time">
+              <input class="small-input top-input" type="time" id="time" >
             </div>
             <div class="input-block username-block">
               <input class="modal-booking-text placeholder top-input" type="text" id="username" placeholder="Name">
+              <div class="error-msg name-error"></div>
             </div>
             <div class="input-block email-block">
               <input class="modal-booking-email placeholder top-input" type="email" id="email" placeholder="E-mail">
+              <div class="error-msg email-error"></div>
             </div>
             <div class="input-block tel-block">
               <input class="modal-booking-tel placeholder top-input" type="tel" id="phone" placeholder="Phone">
+              <div class="error-msg phone-error"></div>
             </div>
             <div class="ticket-type-block">
               <div class="custom-select">
                 <select class="modal-booking-select placeholder top-input" name="ticket-type" id="ticket-type">
                   <option class="disable" value="0" disabled selected>Ticket Type</option>
-                  <option value="1">Permanent exhibition</option>
-                  <option value="2">Temporary exhibition</option>
+                  <option value="0">Permanent exhibition</option>
+                  <option value="1">Temporary exhibition</option>
                   <option value="2">Combined Admission</option>
                 </select>
               </div>
@@ -454,17 +580,17 @@
               <div class="modal-booking-buttons mb15">
                 <div class="modal-booking-amount-descr">Basic 18+ (20 €)</div>
                 <div class="modal-booking-block">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="modal-amount-btn modal-booking-block-item down-btn-basic-form" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item modal-amount-number-input-basic">
+                  <button class="modal-amount-btn modal-booking-block-item up-btn-basic-form" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
               </div>
               <div class="modal-booking-buttons">
                 <div class="modal-booking-amount-descr">Senior 65+ (10 €)</div>
                 <div class="modal-booking-block">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
-                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item">
-                  <button class="modal-amount-btn modal-booking-block-item" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  <button class="modal-amount-btn modal-booking-block-item down-btn-senior-form" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+                  <input type="number" min="0" max="20" value="2" readonly class="modal-amount-input modal-booking-block-item modal-amount-number-input-senior">
+                  <button class="modal-amount-btn modal-booking-block-item up-btn-senior-form" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
               </div>
             </div>
@@ -479,33 +605,33 @@
             <h4 class="modal-overview-top-subheader">Tour to Louvre</h4>
             <div class="icon-wrap icon-wrap-first">
               <img class="modal-overview-top-icon" src="./assets/svg/modal/date.svg" alt="modal-date">
-              <div class="modal-overview-top-descr">Friday, August 19</div>
+              <div class="modal-overview-top-descr modal-overview-date">Friday, August 19</div>
             </div>
             <div class="icon-wrap">
               <img class="modal-overview-top-icon" src="./assets/svg/modal/time.svg" alt="modal-time">
-              <div class="modal-overview-top-descr">16 : 30</div>
+              <div class="modal-overview-top-descr modal-overview-time">16 : 30</div>
             </div>
             <div class="icon-wrap icon-wrap-last">
               <img class="modal-overview-top-icon" src="./assets/svg/modal/tick.svg" alt="modal-tick">
-              <div class="modal-overview-top-descr">Temporary exhibition</div>
+              <div class="modal-overview-top-descr modal-overview-ticket-type">Temporary exhibition</div>
             </div>
           </div>
 
           <div class="modal-overview-descr">
             <div class="modal-overview-descr-wrapper">
               <div class="modal-overview-descr-wrapper-item mb5">
-                <div class="modal-overview-descr-wrapper-item-num">2</div>
+                <div class="modal-overview-descr-wrapper-item-num overview-basic-number">2</div>
                 <div class="modal-overview-descr-wrapper-item-text">Basic (20 €)</div>
               </div>
-              <div class="modal-overview-descr-wrapper-item-sum">40 €</div>
+              <div class="modal-overview-descr-wrapper-item-sum overview-basic-number-sum">40 €</div>
             </div>
 
             <div class="modal-overview-descr-wrapper mb10">
               <div class="modal-overview-descr-wrapper-item">
-                <div class="modal-overview-descr-wrapper-item-num">2</div>
+                <div class="modal-overview-descr-wrapper-item-num overview-senior-number">2</div>
                 <div class="modal-overview-descr-wrapper-item-text">Senior (10 €)</div>
               </div>
-              <div class="modal-overview-descr-wrapper-item-sum">20 €</div>
+              <div class="modal-overview-descr-wrapper-item-sum overview-senior-number-sum">20 €</div>
             </div>
 
             <div class="modal-overview-divider mb10"></div>
@@ -558,6 +684,7 @@
     </section>
   </div>
   <div class="overlay"></div>
+
 
   <footer class="footer">
     <div class="container">
@@ -624,6 +751,14 @@
     </div>
     <div class="divider"></div>
   </footer>
+
+  <a href="#up">
+    <svg class="scroll-up-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up" class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path fill="#710707" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z"></path>
+    </svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
